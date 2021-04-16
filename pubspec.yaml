@@ -12,6 +12,8 @@ dependencies:
   flutter:
     sdk: flutter
 
+  pull_to_refresh: ^1.6.4
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

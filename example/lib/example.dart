@@ -1,5 +1,7 @@
+//@dart = 2.9
 import 'package:flutter/material.dart';
 import 'package:grouped_list/grouped_list.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 void main() => runApp(MyApp());
 
@@ -33,6 +35,13 @@ class MyApp extends StatelessWidget {
               item1['name'].compareTo(item2['name']),
           order: GroupedListOrder.DESC,
           useStickyGroupSeparators: true,
+          didInstallPullRefreshWidget: true,
+          refreshController: RefreshController(),
+          onRefresh: () {
+            print("test");
+          },
+          enablePullDown: true,
+          enablePullUp: true,
           groupSeparatorBuilder: (String value) => Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
