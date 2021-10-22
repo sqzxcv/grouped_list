@@ -2,6 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:grouped_list/grouped_list.dart';
 import 'package:flutter/material.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 final List _elements = [
   {'name': 'John', 'group': 'Team A'},
@@ -29,7 +30,7 @@ void main() {
             itemBuilder: (_, dynamic element) => Container(
               height: 100,
               child: Text(element['name']),
-            ),
+            ), refreshController: RefreshController(),
           ),
         ),
       ),

@@ -178,7 +178,7 @@ class GroupedListView<T, E> extends StatefulWidget {
     /// the scroll position changes drastically.
     final double? itemExtent;
     
-    final RefreshController? refreshController;
+    final RefreshController refreshController;
     
     /// callback when header refresh
     ///
@@ -240,7 +240,7 @@ class GroupedListView<T, E> extends StatefulWidget {
         this.enablePullUp = false,
         this.onLoading,
         this.onRefresh,
-        this.refreshController
+        required this.refreshController
     })  : assert(itemBuilder != null || indexedItemBuilder != null),
             assert(groupSeparatorBuilder != null || groupHeaderBuilder != null),
             super(key: key);
